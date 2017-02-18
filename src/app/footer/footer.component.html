@@ -1,0 +1,27 @@
+<footer class="footer" >
+  <!-- This should be `0 items left` by default -->
+  <span class="todo-count"><strong>{{activeLength}}</strong> item left</span>
+  <!-- Remove this if you don't implement routing -->
+  <ul class="filters">
+    <!--<li>
+      <a [class.selected]="selected_type === 'All'" (click)="selected_type = 'All'" href="#/">All</a>
+    </li>
+    <li>
+      <a [class.selected]="selected_type === 'Active'" (click)="selected_type = 'Active'" href="#/active">Active</a>
+    </li>
+    <li>
+      <a [class.selected]="selected_type === 'Completed'" (click)="selected_type = 'Completed'" href="#/completed">Completed</a>
+    </li>-->
+    <li>
+      <a [class.selected]="selected_type === 'All'" (click)="passSelectedType('All')" href="#/">All</a>
+    </li>
+    <li>
+      <a [class.selected]="selected_type === 'Active'" (click)="passSelectedType('Active')" href="#/active">Active</a>
+    </li>
+    <li>
+      <a [class.selected]="selected_type === 'Completed'" (click)="passSelectedType('Completed')" href="#/completed">Completed</a>
+    </li>
+  </ul>
+  <!-- Hidden if no completed items are left ↓ -->
+  <button class="clear-completed" (click)="clearCompletedEvtEmitter()">Clear completed</button>
+</footer>

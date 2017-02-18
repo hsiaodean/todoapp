@@ -5,10 +5,18 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { TitleComponent } from './title/title.component';
+import { FooterComponent } from './footer/footer.component';
+
+import { FilterPipe } from './filter.pipe';
+import {DataService} from './data.service'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TitleComponent,
+    FooterComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -16,7 +24,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
